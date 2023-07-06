@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <p> Amazon shipping Calculator</p>
+
+  <p>order under $  40 =+ $10</p>
+  <p>order over $  40 = Free shiping </p>
+
+  <input class="js-number" type="text" onkeydown="
+      console.log(event.key);
+      
+  ">
+  <button  onclick="calculate();">Calculate</button>
+  <p class="result"></p>
+  
+  <script>
+    
+    function calculate(){
+
+      let inputNumber= Number(document.querySelector(".js-number").value)
+
+      if(inputNumber<40){
+        let total =inputNumber+10
+        document.querySelector('.result').innerHTML= `$${total}`
+
+      }else{
+        document.querySelector('.result').innerHTML= inputNumber
+      }
+
+
+
+    }
+    //document.querySelector(".js-calulate")
+
+  </script>
+</body>
+
+
+/* press Calculate check if the below 40 if yes  */
+
+
+</html>
+
